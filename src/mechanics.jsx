@@ -1,21 +1,13 @@
 import React from 'react'
 import SingleMechanic from './singleMechanic'
 
-const Mechanics = () => {
-  const firstNameLastName = "PlaceholderFirstNameLastName";
-  const age = "Age placeholder";
-  const gender = "Gender placeholder";
-  const employmentStatus = "Employment placeholder";
-  const story = "Story placeholder";
+const Mechanics = ({mechanics, onAdd, onRemove}) => {
 
   return (
     <div className='everyMechanic'>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
-      <SingleMechanic mechanicName={firstNameLastName} mechanicAge = {age} mechanicGender = {gender} mechanicEmploymentStatus = {employmentStatus} mechanicStory = {story}/>
+      {mechanics.map((mechanic) => (
+        <SingleMechanic key={mechanic.id} mechanic={mechanic} onAdd={onAdd} onRemove={onRemove}/>
+      ))}
     </div>
   )
 }

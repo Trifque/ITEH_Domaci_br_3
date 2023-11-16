@@ -1,13 +1,15 @@
 import React from 'react'
 import { FaSearch } from "react-icons/fa";
 import { MdGroup } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-function LookItUp() {
+function LookItUp({numberOfInvitedPeople}) {
   return (
     <div className='lookItUp'>
-      <a><FaSearch style={{ marginRight: 100 }}/></a>
+      <Link to="/"><FaSearch style={{ marginRight: 100 }}/></Link>
       <a>Mechanical Meetup</a>
-      <a><MdGroup style={{ marginLeft: 100 }}/></a>
+      <Link to="/listOfInvitedPeople"><MdGroup style={{ marginLeft: 100 }}/></Link>
+      <div className='numberOfInvitedPeople'>{numberOfInvitedPeople}</div>
     </div>
   )
 }
