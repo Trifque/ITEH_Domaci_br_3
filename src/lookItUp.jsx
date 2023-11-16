@@ -7,7 +7,7 @@ function LookItUp({numberOfInvitedPeople}) {
   return (
     <div className='lookItUp'>
       <Link to="/"><FaSearch style={{ marginRight: 100 }}/></Link>
-      <a>Mechanical Meetup</a>
+      <h1>Mechanical Meetup</h1>
       <Link to="/listOfInvitedPeople"><MdGroup style={{ marginLeft: 100 }}/></Link>
       <div className='numberOfInvitedPeople'>{numberOfInvitedPeople}</div>
     </div>

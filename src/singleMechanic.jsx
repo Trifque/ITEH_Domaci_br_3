@@ -4,7 +4,7 @@ const SingleMechanic = ({ mechanic, onAdd, onRemove }) => {
 
   return (
     <div className='mechanicRectangle'>
-      <img className='mechanicRectangleProfilePicture' src="https://i1.sndcdn.com/avatars-000787434634-i9sqvl-t240x240.jpg" alt="Random pic"/>
+      <img className='mechanicRectangleProfilePicture' src={mechanic.profilePic} alt="Random pic"/>
       <div className='mechanicRectangleBio'>
         <h3 className='mechanicRectangleFirstNameLastName'>{mechanic.firstNameLastName}</h3>
         <div className='mechanicRectangleGeneralInfo'>
